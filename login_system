@@ -1,0 +1,22 @@
+# Login System
+
+correct_username = "harsh"
+correct_password = "harsh123"
+
+attempts = 3
+
+while attempts > 0:
+    username = input("Enter Username: ")
+    password = input("Enter Password: ")
+
+    if username == correct_username and password == correct_password:
+        print(" Login Successful!")
+        print(f"Welcome {username}")
+        break
+    else:
+        attempts -= 1
+        print(" Invalid Username or Password")
+        print("Attempts Left:", attempts)
+
+if attempts == 0:
+    print(" Account Locked!")
